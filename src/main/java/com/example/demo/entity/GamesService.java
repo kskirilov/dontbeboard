@@ -30,6 +30,10 @@ public class GamesService {
         System.out.println(games);
     }
 
+    public List<Games> filterGame(int playerCount, int avgDuration, String gameKind, String gameMood,String ageGroup){
+        return gamesRepository.findGames(playerCount, avgDuration, gameKind, gameMood, ageGroup);
+    }
+
     public void deleteGame(Long id) {
         boolean exists = gamesRepository.existsById(id);
         if (!exists){
@@ -37,4 +41,5 @@ public class GamesService {
         }
         gamesRepository.deleteById(id);
     }
+
 }

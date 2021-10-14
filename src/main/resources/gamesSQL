@@ -1,4 +1,0 @@
-CREATE DATABASE games;
-\du
-GRANT ALL PRIVILEGES ON DATABASE "games" TO {yourusername}
-GRANT ALL PRIVILEGES ON DATABASE "games" TO postgres;

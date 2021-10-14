@@ -1,0 +1,37 @@
+CREATE DATABASE games;
+\du
+GRANT ALL PRIVILEGES ON DATABASE "games" TO {yourusername}
+GRANT ALL PRIVILEGES ON DATABASE "games" TO postgres;
+
+
+
+//NOT NEEDED, ONLY IF YOU CANT POPULATE THROUGH INTELLIJ
+CREATE TABLE games(
+    id SERIAL UNIQUE,
+    gameName VARCHAR(255) NOT NULL,
+    gamePhoto TEXT NOT NULL,
+    gameDescription TEXT,
+    gameRules TEXT,
+    releaseDate DATE,
+    minPlayers INT,
+    maxPlayers INT,
+    avgDuration INT,
+    gameKind VARCHAR(255),
+    gameMood VARCHAR(255),
+    ageGroup VARCHAR(255),
+    PRIMARY KEY (ID)
+);
+
+INSERT INTO games (
+gameName,
+gamePhoto,
+gameDescription,
+gameRules,
+releaseDate,
+minPlayers,
+maxPlayers,
+avgDuration,
+gameKind,
+gameMood,
+ageGroup)
+VALUES ('Hangman', 'https://image.shutterstock.com/image-illustration/illustration-hangman-game-260nw-386156509.jpg','One player chooses a word and the rest have a minimum of 6 attempts to guess it', '1. Player 1 pick a word 2. Remaining players make a letter guess. If the letter is correct the player has to add it to the words else it is considered a wrong attempt', '1650-01-01' , 2, 6, 15, 'penAndPaper', 'fun', 'all');
