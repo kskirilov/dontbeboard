@@ -16,10 +16,17 @@ public class GamesService {
         this.gamesRepository = gamesRepository;
     }
 
-    public List<Games> getGames(){
-        return gamesRepository.findAll();
-    }
+//    public List<Games> getGames(){
+//        return gamesRepository.findAll();
+//    }
 
+//    public List<Games> findGames(int player_count, int avg_duration, String game_kind, String game_mood, String age_group){
+//        return gamesRepository.findGames(player_count, avg_duration, game_kind, game_mood, age_group);
+//    }
+
+    public Games getGameByName(String gameName){
+        return gamesRepository.findGameByName(gameName).get();
+    }
 
     public void addNewGame(Games games) {
         Optional<Games> gameByName = gamesRepository.findGameByName(games.getGameName());
@@ -30,7 +37,8 @@ public class GamesService {
         System.out.println(games);
     }
 
-    public List<Games> filterGame(int playerCount, int avgDuration, String gameKind, String gameMood,String ageGroup){
+    public List<Games> findGames(int playerCount, int avgDuration, String gameKind, String gameMood, String ageGroup){
+
         return gamesRepository.findGames(playerCount, avgDuration, gameKind, gameMood, ageGroup);
     }
 

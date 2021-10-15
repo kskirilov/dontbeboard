@@ -4,17 +4,11 @@ import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table
+@Table(name="games")
 public class Games {
     @Id
-    @SequenceGenerator(
-            name = "games_sequence",
-            sequenceName = "games_sequence",
-            allocationSize = 1
-    )
     @GeneratedValue(
-            strategy = GenerationType.SEQUENCE,
-            generator = "games_sequence"
+            strategy = GenerationType.IDENTITY
     )
     private Long id;
     private String gameName;
@@ -155,24 +149,6 @@ public class Games {
 
     public void setAgeGroup(String ageGroup) {
         this.ageGroup = ageGroup;
-    }
-
-    @Override
-    public String toString() {
-        return "Games{" +
-                "id=" + id +
-                ", gameName='" + gameName + '\'' +
-                ", gamePhoto='" + gamePhoto + '\'' +
-                ", gameDescription='" + gameDescription + '\'' +
-                ", gameRules='" + gameRules + '\'' +
-                ", releaseDate=" + releaseDate +
-                ", minPlayers=" + minPlayers +
-                ", maxPlayers=" + maxPlayers +
-                ", avgDuration=" + avgDuration +
-                ", gameKind='" + gameKind + '\'' +
-                ", gameMood='" + gameMood + '\'' +
-                ", ageGroup='" + ageGroup + '\'' +
-                '}';
     }
 }
 
