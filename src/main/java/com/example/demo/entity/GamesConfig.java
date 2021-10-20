@@ -24,13 +24,13 @@
 //                  2,
 //                  6,
 //                  15,
-//                  "penAndPaper",
+//                  "noEquipment",
 //                  "fun",
 //                  "all"
 //          );
 //          Games uno = new Games(
 //                  "UNO",
-//                  "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nintendo.com%2Fgames%2Fdetail%2Funo-switch%2F&psig=AOvVaw3Ap08n6-oVPxY7xTcpiGrZ&ust=1633703211716000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKDypPHAuPMCFQAAAAAdAAAAABAK",
+//                  "https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Funo%2Fhome%2FGameName_Store_Landscape_2560x1440-2560x1440-5195e8a3e06d672f97a1ee49ecea59027c14cae4.jpg",
 //                  "This is a description for the game UNO",
 //                  "Those are the rules for the game UNO",
 //                  LocalDate.of(1971, JANUARY, 1),
@@ -51,9 +51,9 @@
 //                  2,
 //                  12,
 //                  30,
-//                  "cards (standard)",
+//                  "cards",
 //                  "drinking",
-//                  "adult (18+)"
+//                  "adult"
 //          );
 //          Games jenga = new Games(
 //                  "Jenga",
@@ -64,8 +64,8 @@
 //                  2,
 //                  6,
 //                  20,
-//                  "board (jenga), physical",
-//                  "fun, strategy, hand skill",
+//                  "board",
+//                  "strategy",
 //                  "all"
 //          );
 //          //          Twister
@@ -78,7 +78,7 @@
 //                  2,
 //                  4,
 //                  60,
-//                  "board (twister), physcal",
+//                  "physical",
 //                  "fun",
 //                  "all"
 //          );
@@ -92,7 +92,7 @@
 //                  2,
 //                  6,
 //                  60,
-//                  "cards (What Do You Meme)",
+//                  "cards",
 //                  "fun",
 //                  "all"
 //          );
@@ -106,9 +106,9 @@
 //                  2,
 //                  10,
 //                  60,
-//                  "cards (standard)",
-//                  "fun, drinking",
-//                  "adult (18+)"
+//                  "cards",
+//                  "drinking",
+//                  "adult"
 //          );
 //          //          The Pretender
 //          Games thePretender = new Games(
@@ -120,7 +120,7 @@
 //                  4,
 //                  8,
 //                  20,
-//                  "cards (The Pretender)",
+//                  "cards",
 //                  "fun",
 //                  "all"
 //          );
@@ -134,9 +134,9 @@
 //                  3,
 //                  20,
 //                  60,
-//                  "cards (Cards Against Humanity)",
-//                  "fun, drinking",
-//                  "adult (18+)"
+//                  "cards",
+//                  "drinking",
+//                  "adult"
 //          );
 //          //TheMind
 //          Games theMind = new Games(
@@ -148,7 +148,7 @@
 //                  2,
 //                  4,
 //                  15,
-//                  "cards (The Mind)",
+//                  "cards",
 //                  "fun",
 //                  "all"
 //          );
