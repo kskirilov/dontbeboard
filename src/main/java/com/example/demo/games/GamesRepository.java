@@ -22,7 +22,7 @@ public interface GamesRepository extends JpaRepository<Games,Long> {
             "WHERE min_players<= ?1 " +
             "AND max_players>=?1 " +
             "AND avg_duration<=?2 " +
-            "AND CASE WHEN ?3='all' THEN game_kind = 'board' OR game_kind = 'cards' OR game_kind LIKE 'noEquipment' OR game_kind LIKE 'videoGame' OR game_kind LIKE 'physical' OR game_kind LIKE 'penAndPaper' ELSE game_kind = ?3 END " +
+            "AND CASE WHEN ?3='all' THEN game_kind = 'board' OR game_kind = 'cards' OR game_kind = 'arcade' OR game_kind LIKE 'noEquipment' OR game_kind LIKE 'videoGame' ELSE game_kind = ?3 END " +
             "AND CASE WHEN ?4='all' THEN game_mood = 'fun' OR game_mood LIKE 'competitive' OR game_mood='drinking' OR game_mood = 'strategy' ELSE game_mood = ?4 END " +
             "AND CASE WHEN ?5='all' THEN age_group = 'kids' OR age_group LIKE 'adult' OR age_group LIKE 'teens' OR age_group LIKE 'family' OR age_group LIKE 'all' ELSE age_group = ?5 END ")
                     // when teens='all' then (...) else age_group LIKE

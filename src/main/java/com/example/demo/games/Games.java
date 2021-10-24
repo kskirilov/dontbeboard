@@ -1,5 +1,7 @@
 package com.example.demo.games;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -12,8 +14,11 @@ public class Games {
     )
     private Long id;
     private String gameName;
+    @Column(columnDefinition="TEXT")
     private String gamePhoto;
+    @Column(columnDefinition="TEXT")
     private String gameDescription;
+    @Column(columnDefinition="TEXT")
     private String gameRules;
     private LocalDate releaseDate;
     private Integer minPlayers;
