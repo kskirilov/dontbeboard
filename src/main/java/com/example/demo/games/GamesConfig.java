@@ -204,7 +204,7 @@ public class GamesConfig {
                   LocalDate.of(1999, JANUARY, 1),
                   2,
                   4,
-                  150,
+                  30,
                   "cards",
                   false,
                   "strategy",
@@ -243,7 +243,7 @@ public class GamesConfig {
           // catan
           Games catan = new Games(
                   "Catan",
-                  "https://upload.wikimedia.org/wikipedia/en/3/36/Pandemic_game.jpg",
+                  "https://miro.medium.com/max/7848/1*r_rq_fRLNliX91GSgMi38Q.jpeg",
                   "Catan, previously known as The Settlers of Catan or simply Settlers, is a multiplayer board game designed by Klaus Teuber. It was first published in 1995 in Germany by Franckh-Kosmos Verlag (Kosmos) as Die Siedler von Catan. Players take on the roles of settlers, each attempting to build and develop holdings while trading and acquiring resources. Players gain victory points as their settlements grow; the first to reach a set number of victory points, typically 10, wins. The game and its many expansions are also published by Catan Studio, Filosofia, GP, Inc., 999 Games, Κάισσα, and Devir. The Settlers of Catan became one of the first German-style board games to achieve popularity outside Europe.[6] As of 2015, more than 22 million copies in 30 languages had been sold.[7][8]",
                   "** Check the Wikipedia rules for detailed rules information **  (https://en.wikipedia.org/wiki/Catan#Gameplay)",
                   LocalDate.of(1995, JANUARY, 1),

@@ -37,8 +37,8 @@ public class GamesApi {
     //@RequestParams
 
     @GetMapping
-    public List<Games> findGames(@RequestParam(required = false, defaultValue="2") int playerCount,
-                                 @RequestParam(required = false, defaultValue="60") int avgDuration,
+    public List<Games> findGames(@RequestParam(required = false, defaultValue="3") int playerCount,
+                                 @RequestParam(required = false, defaultValue="500") int avgDuration,
                                  @RequestParam(required = false, defaultValue="all") String gameKind,
                                  @RequestParam(required = false, defaultValue="all") String gameMood,
                                  @RequestParam(required = false, defaultValue="all") String ageGroup) {
