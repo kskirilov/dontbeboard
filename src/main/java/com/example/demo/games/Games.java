@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.example.demo.games;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -20,13 +20,17 @@ public class Games {
     private Integer maxPlayers;
     private Integer avgDuration;
     private String gameKind;
+    private Boolean isStandardCards;
     private String gameMood;
     private String ageGroup;
+    private double gameCost;
 
-    public Games() {
+    public Games(Boolean isStandardCards, double gameCost) {
+        this.isStandardCards = isStandardCards;
+        this.gameCost = gameCost;
     }
 
-    public Games(String gameName, String gamePhoto, String gameDescription, String gameRules, LocalDate releaseDate, Integer minPlayers, Integer maxPlayers, Integer avgDuration, String gameKind, String gameMood, String ageGroup) {
+    public Games(String gameName, String gamePhoto, String gameDescription, String gameRules, LocalDate releaseDate, Integer minPlayers, Integer maxPlayers, Integer avgDuration, String gameKind, Boolean isStandardCards, String gameMood, String ageGroup, double gameCost) {
         this.gameName = gameName;
         this.gamePhoto = gamePhoto;
         this.gameDescription = gameDescription;
@@ -36,11 +40,13 @@ public class Games {
         this.maxPlayers = maxPlayers;
         this.avgDuration = avgDuration;
         this.gameKind = gameKind;
+        this.isStandardCards = isStandardCards;
         this.gameMood = gameMood;
         this.ageGroup = ageGroup;
+        this.gameCost = gameCost;
     }
 
-    public Games(Long id, String gameName, String gamePhoto, String gameDescription, String gameRules, LocalDate releaseDate, Integer minPlayers, Integer maxPlayers, Integer avgDuration, String gameKind, String gameMood, String ageGroup) {
+    public Games(Long id, String gameName, String gamePhoto, String gameDescription, String gameRules, LocalDate releaseDate, Integer minPlayers, Integer maxPlayers, Integer avgDuration, String gameKind, Boolean isStandardCards, String gameMood, String ageGroup, double gameCost) {
         this.id = id;
         this.gameName = gameName;
         this.gamePhoto = gamePhoto;
@@ -51,8 +57,10 @@ public class Games {
         this.maxPlayers = maxPlayers;
         this.avgDuration = avgDuration;
         this.gameKind = gameKind;
+        this.isStandardCards = isStandardCards;
         this.gameMood = gameMood;
         this.ageGroup = ageGroup;
+        this.gameCost = gameCost;
     }
 
     public Long getId() {
@@ -134,6 +142,14 @@ public class Games {
     public void setGameKind(String gameKind) {
         this.gameKind = gameKind;
     }
+
+    public Boolean getStandardCards() {return isStandardCards;}
+
+    public void setStandardCards(Boolean standardCards) {isStandardCards = standardCards;}
+
+    public double getGameCost() {return gameCost;}
+
+    public void setGameCost(double gameCost) {this.gameCost = gameCost;}
 
     public String getGameMood() {
         return gameMood;
