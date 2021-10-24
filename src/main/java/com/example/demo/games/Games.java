@@ -25,9 +25,7 @@ public class Games {
     private String ageGroup;
     private double gameCost;
 
-    public Games(Boolean isStandardCards, double gameCost) {
-        this.isStandardCards = isStandardCards;
-        this.gameCost = gameCost;
+    public Games() {
     }
 
     public Games(String gameName, String gamePhoto, String gameDescription, String gameRules, LocalDate releaseDate, Integer minPlayers, Integer maxPlayers, Integer avgDuration, String gameKind, Boolean isStandardCards, String gameMood, String ageGroup, double gameCost) {

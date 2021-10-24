@@ -19,22 +19,9 @@ public class GameSuggestionsApi {
         this.suggestionsService = suggestionsService;
     }
 
-    @GetMapping
-    public List<GameSuggestions> findGames(@RequestParam(required = false, defaultValue="2") int playerCount,
-                                 @RequestParam(required = false, defaultValue="60") int avgDuration,
-                                 @RequestParam(required = false, defaultValue="all") String gameKind,
-                                 @RequestParam(required = false, defaultValue="all") String gameMood,
-                                 @RequestParam(required = false, defaultValue="all") String ageGroup) {
-        return suggestionsService.findGames(playerCount, avgDuration, gameKind, gameMood, ageGroup);
-    }
-
     @PostMapping
     public void addNewGame(@RequestBody GameSuggestions games){
         suggestionsService.addNewGame(games);
     }
 
-    @DeleteMapping(path="{gameId}")
-    public void deleteGameById(@PathVariable("gameId") Long id){
-        suggestionsService.deleteGame(id);
-    }
 }

@@ -45,25 +45,6 @@ public class GamesApi {
         return gamesService.findGames(playerCount, avgDuration, gameKind, gameMood, ageGroup);
     }
 
-    //get all homes in London
-    /*https://www.airbnb.co.uk/s/London/homes
-                                        ?tab_id=home_tab
-                                        &refinement_paths%5B%5D=%2Fhomes
-                                        &flexible_trip_dates%5B%5D=november
-                                        &flexible_trip_dates%5B%5D=october
-                                        &flexible_trip_lengths%5B%5D=weekend_trip
-                                        &date_picker_type=calendar
-                                        &query=London
-                                        &place_id=ChIJdd4hrwug2EcRmSrV3Vo6llI
-                                        &checkin=2021-11-18
-                                        &checkout=2021-11-20
-                                        &adults=2
-                                        &source=structured_search_input_header
-                                        &search_type=filter_change
-                                        &price_max=500
-                                        &room_types%5B%5D=Private%20room
-*/
-
     @PostMapping
     public void addNewGame(@RequestBody Games games){
         gamesService.addNewGame(games);
